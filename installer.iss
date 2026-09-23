@@ -17,7 +17,7 @@
 ; non-ASCII characters (Pokémon), and Inno 6 reads a BOM-less .iss as ANSI, which corrupts them.
 
 #define AppName    "PTCGL Leaderboard & Match History"
-#define AppVer     "1.0.1"
+#define AppVer     "1.0.2"
 #define AppPub     "Inevitable2002"
 #define GameExe    "Pokemon TCG Live.exe"
 #define LauncherEx "PtcglLeaderboardLauncher.exe"
