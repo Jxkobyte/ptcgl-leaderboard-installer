@@ -121,7 +121,15 @@ Type: files;          Name: "{app}\.doorstop_version"
 ; BepInEx's own changelog.txt shipped in older payloads and landed in the game root. It is no
 ; longer installed, but remove it so an upgrade from an older build cleans up after itself.
 Type: files;          Name: "{app}\changelog.txt"
-Type: filesandordirs; Name: "{#CacheDir}"
+; Only OUR files in the cache folder - never the whole folder. The plugin keeps the player's match
+; history (matches.jsonl) and avatar cache there too, precisely so a game update cannot destroy
+; them, and deleting the folder on uninstall would destroy them instead. Reinstalling picks the
+; history straight back up.
+Type: filesandordirs; Name: "{#CacheDir}\payload"
+Type: files;          Name: "{#CacheDir}\manifest.tsv"
+Type: files;          Name: "{#CacheDir}\gamepath.txt"
+Type: files;          Name: "{#CacheDir}\repair.log"
+Type: files;          Name: "{#CacheDir}\{#LauncherEx}"
 
 [Code]
 
