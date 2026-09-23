@@ -1,0 +1,22 @@
+# Build output
+/build/output/
+/Output/
+
+# Installers
+*.exe
+*.msi
+
+# IDE/editor
+.vscode/
+.idea/
+Thumbs.db
+
+# Logs
+*.log
+
+# Build outputs staged by build.ps1 from the PtcglLeaderboard repo. Never commit them: the
+# installer packages whatever sits in src\, so a committed copy is how a stale binary ships.
+/src/files/BepInEx/plugins/PtcglLeaderboard.dll
+/src/launcher/
+# Legacy plugin from the old combined GameStateReader era - not part of any payload.
+/src/staging/
