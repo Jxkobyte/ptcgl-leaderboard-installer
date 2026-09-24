@@ -1,6 +1,7 @@
 """
 Generates ptcglleaderboard.ico - the icon on the launcher, the installer, and the
-"Pokemon TCG Live (Leaderboard & Match History)" shortcut.
+"Pokemon TCG Live (Leaderboard & Match History)" shortcut - and ptcglleaderboard.icns, the
+same mark for the macOS "PTCGL Leaderboard" app.
 
 Deliberately original artwork. The game's own icon is not used and must not be: it is TPCi's
 mark, and an installer wearing it would also imply this is an official product.
@@ -101,3 +102,11 @@ frames[256].save(
     append_images=[frames[s] for s in SIZES[:-1]],
 )
 print("wrote src/branding/ptcglleaderboard.ico with sizes:", SIZES)
+
+# macOS: the same mark for the "PTCGL Leaderboard" launcher app. Mac icons sit inset in their
+# canvas (824 of 1024 for the tile) rather than filling it, so it is drawn smaller and centred;
+# Pillow derives the other ICNS sizes from the 1024 one.
+mac = Image.new("RGBA", (1024, 1024), (0, 0, 0, 0))
+mac.paste(render(824), (100, 100))
+mac.save("src/branding/ptcglleaderboard.icns", format="ICNS")
+print("wrote src/branding/ptcglleaderboard.icns")

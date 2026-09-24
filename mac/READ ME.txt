@@ -1,0 +1,38 @@
+PTCGL Leaderboard & Match History - for Mac
+===========================================
+
+INSTALL
+
+1. Quit Pokemon TCG Live.
+2. Double-click "Install PTCGL Leaderboard". A Terminal window opens and shows each step.
+
+   If macOS says it can't be opened because the developer can't be verified: click Done (or
+   OK), open System Settings > Privacy & Security, scroll down, click "Open Anyway" next to
+   "Install PTCGL Leaderboard", and confirm. (On older macOS you can instead right-click the
+   file, choose Open, then Open.) It's open source: https://github.com/Jxkobyte/PtcglLeaderboard
+
+3. When it says Done, start the game with the new "PTCGL Leaderboard" app in your Applications
+   folder. Drag it into your Dock to keep it handy. Opening Pokemon TCG Live any other way
+   starts the game without the leaderboard.
+
+The first time, macOS may say PTCGL Leaderboard (or Terminal) was prevented from modifying
+apps. Open System Settings > Privacy & Security > App Management, turn it on, and try again.
+It needs that to add the leaderboard to the game, and to put it back after game updates.
+
+On Apple Silicon Macs the game runs with the leaderboard under Rosetta, Apple's translator for
+Intel apps. The installer sets Rosetta up if it is missing.
+
+No administrator password is needed.
+
+UNINSTALL
+
+Quit Pokemon TCG Live, then double-click "Uninstall PTCGL Leaderboard". Your match history is
+kept in ~/Library/Application Support/PtcglLeaderboard in case you reinstall.
+
+HELP
+
+If something goes wrong, a message tells you which log file to send. Message jakobi_ on Discord.
+
+Unofficial fan-made mod. Not affiliated with, endorsed by, or connected to The Pokemon Company,
+Nintendo, Creatures or GAME FREAK. Pokemon and Pokemon TCG Live are trademarks of their
+respective owners.
